@@ -1,0 +1,55 @@
+.custom-footer {
+    background-color: #ead6bc; 
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;  
+    margin: 0 auto;
+    padding: 0 20px;   
+}
+
+.subscribe-section h4 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #f6a63e;
+}
+
+form.form-inline {
+    justify-content: center;
+}
+
+.bottom-section {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;  
+}
+
+.payment-icons i, .social-icons i {
+    font-size: 24px;   
+    margin: 0 10px;
+    color: #534a3f;
+}
+
+.copyright-text p {
+    margin: 10px 0 0;
+    color: #534a3f;
+}
+.btn-success {
+    background-color: #f6a63e;  
+    color: #ffffff;             
+    border: none;             
+}
+
+.btn-success:hover {
+    background-color: #9d6926;  
+}
+
+
+
+
+
+

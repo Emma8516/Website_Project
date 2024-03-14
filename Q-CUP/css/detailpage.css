@@ -1,0 +1,45 @@
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.product-detail {
+    padding: 2rem;
+}
+
+.product-info {
+    display: flex;
+}
+
+.product-image img {
+    max-width: 300px;
+    height: auto;
+}
+
+.product-description {
+    flex: 6;
+    padding: 1rem;
+}
+
+
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-option {
+    margin: 0 5px; 
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.quantity {
+    margin-bottom: 20px; 
+}
+.color-selector {
+    margin-bottom: 20px;  
+}
+

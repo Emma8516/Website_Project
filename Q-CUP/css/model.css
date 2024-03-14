@@ -1,0 +1,9 @@
+.modal-dialog {
+    background-color: #f6a63e;  
+    color: #ffffff;            
+    border: none;              
+}
+
+.btn-success:hover {
+    background-color: #9d6926;  
+}

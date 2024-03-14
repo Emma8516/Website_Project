@@ -1,0 +1,69 @@
+
+
+.btn-orange {
+    background-color: #efc26d;  
+    color: whitesmoke;  
+    border: none;  
+}
+
+.btn-lightgray {
+    background-color: #D3D3D3;  
+    color: whitesmoke; 
+    border: none;  
+}
+
+.btn-orange:hover {
+    background-color: #a77332;
+}
+
+.btn-lightgray:hover {
+    background-color: #C0C0C0;
+}
+
+.card-title.mb-auto {
+    margin-bottom: 20px !important; 
+    color:rgb(96, 94, 94)
+}
+.fa-light.fa-droplet {
+    color: #ebebeb;
+    display: block;
+}
+
+.category-container {
+    background-color: rgba(162, 123, 101, 0.5);
+    border-radius: 20px;
+    padding: 50px; 
+    margin: 10px;
+}
+
+.category {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;    
+    justify-content: center; 
+}
+
+a:focus, a:hover {
+    outline: none;
+    text-decoration: none;  
+}
+
+.alert-warning {
+    background-color: #f3ce3b; 
+    border:none;    
+    color: #975509;         
+}
+
+
+
+
+
+
+
+
+
+
+

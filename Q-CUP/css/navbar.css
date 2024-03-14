@@ -1,0 +1,10 @@
+
+.navbar .nav-link {
+    font-size: 1.5em;  
+    padding: 5px 10px;  
+}
+
+.navbar .fa-solid {
+    font-size: 1.5em;  
+    margin-right: -10px;  
+}

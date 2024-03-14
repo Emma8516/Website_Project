@@ -1,0 +1,37 @@
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(246, 248, 249, 0.548);  
+}
+
+.text-container {
+    background: rgba(255, 195, 113, 0.7);  
+    
+}
+
+.homepage-heading {
+    color: rgb(80, 78, 74);
+}
+
+.btn.colour {
+    background-color: #d99a35;  
+    color: #ffffff;             
+    border: none;              
+}
+
+
+.btn.colour:hover, 
+.btn.colour:active, 
+.btn.colour:focus {
+    background-color: #855f21; 
+    color: #ffffff;            
+    outline: none;             
+}
+
