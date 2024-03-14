@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<!-- display tours for the specific city -->
+<section>
+
+    <div class="text-dark text-center">
+        <div>
+            <p class="h3 text-dark mb-4">Our Products</p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        
+        <div class="row">
+            {% for product in products %}
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <!-- each tour is a bootstrap card -->
+                
+                <div class="card h-100">
+                    <img class="card-img-top" src="{{url_for('static', filename='Images/'+product.image)}}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">{{product.name}}</h4>
+                        <p class="card-text">{{product.description}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5>Price: ${{product.price}}</h5>
+                        </li>
+                        <li class="list-group-item">
+                            <h6>Sizes: {{product.size}}</h6>
+                        </li>
+                        <li class="list-group-item">
+                            <h6>Color: {{product.color}}</h6>
+                        </li>
+             
+                        <li class="list-group-item">
+                            <h6>Material: {{product.material}}</h6>
+                        </li>
+                    </ul>
+                    <div class="card-footer">
+                        
+                            <button id="addtocartbutton">
+                                <form action="{{url_for('main.shoppingbasket')}}">
+                                <input type="hidden" id="product_id" name="product_id" value="{{product.id}}">
+                                <input class="btn" type="submit" value="Add to Basket">
+                                </form>
+                            </button>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>     
+
+</section>
+{% endblock %}

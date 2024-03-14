@@ -1,0 +1,124 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Home page {% endblock %}
+
+{% block main %}
+    <!-- JUMBOTRON -->
+    <div class="jumbotron" id="headingjumbotron" style="background-image: url({{url_for('static', filename='Images/jumbotron1.png')}})";>
+      <div class="heading">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+          <h1 class="display-4">Spring 2023</h1>
+          <h1 class="display-4">Collection</h1>
+          <p></p>
+        </div>
+        <div class="col-8 col-sm-6 col-md-6 col-lg-12">
+          <h2 class="lead">Intuitive. Adaptable. Expressive</h2>
+          <p></p>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4" style="font-size: 18px; margin-top: 20px;">
+          <p>Ready for any twist in your day, in soft and dynamic styles. Our new season range is a favourite.</p>
+        </div>
+
+        <a href="{{url_for('main.products')}}"><button class="jumbo headerbutton">View Details</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FIRST CONTENT BEST SELLER -->
+  <main>
+    <div class="content1">
+        <h3 class="bestseller">Best Sellers</h3>
+        <p style="font-size: 18px;"> From everyday staples to standout pieces, we have something to suit every occasion.
+        </p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+
+          {% for product in products %}
+
+            <!-- Product 1 -->
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card h-100">
+                  <a href="{{ url_for('main.products') }}"><img src="{{url_for('static', filename='Images/'+product.image)}}"
+                            class="card-img-top" alt="Product Image" style="width:100%"></a>
+                    <div class="card-body">
+                        <a class="nav-link productname" href="{{ url_for('main.products') }}">
+                            <button class="card-title">{{product.name}}</button>
+                        </a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <line style="font-size: 18px">Price: ${{product.price}}</line>
+                        </li>
+                    </ul>
+                    <form action="{{url_for('main.products')}}">
+                        <button type="submit" class="btn addcart" id="detailsbutton">
+                              <input type="hidden" id="product_id" name="product_id" value="{{product.id}}">
+                              <input class="btn" type="submit" value="View Details">
+                        </button>
+                      </form>
+                </div>
+            </div>
+
+            {% endfor %}
+
+                       
+        </div>
+    </div>
+</main>
+
+    <!-- SUBSCRIBE JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid" id="subscribe" style="background-color: rgba(232, 210, 187, 0.75);">
+      <div class="container">
+        <h3>Become a member to get 10% off your next purchase</h3>
+        <p class="lead">Plus free shipping and returns on orders over $60. Join now, it's free!</p>
+        <a href="#"><button class="jumbo headerbutton" id="memberbutton">Join Membership</button></a>
+      </div>
+    </div>
+
+    <!-- PRODUCT CATEGORY CONTENT -->
+    <div class="content1">
+      <h3 class="bestseller" style="margin-top: 30px; margin-bottom: 10px;">Product Categories</h3>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" id="category-card">
+        <div class="col-6 col-md-6 col-lg-3 mt-4">
+          <div class="card">
+            <img src="{{ url_for('static', filename='Images/tops.png') }}" class="card-img-top" alt="Tops">
+            <div class="card-body">
+              <a href="{{ url_for('main.products') }}"><h5 class="card-text">Tops</h5></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3 mt-4">
+          <div class="card">
+            <img src="{{ url_for('static', filename='Images/bottoms.png') }}" class="card-img-top" alt="Bottoms">
+            <div class="card-body">
+              <a href="{{ url_for('main.products') }}"><h5 class="card-text">Bottoms</h5></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3 mt-4">
+          <div class="card">
+            <img src="{{ url_for('static', filename='Images/outerwear.png') }}" class="card-img-top" alt="Outer/Jumper">
+            <div class="card-body">
+              <a href="{{ url_for('main.products') }}"><h5 class="card-text">Outer/Jumper</h5></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3 mt-4">
+          <div class="card">
+            <img src="{{ url_for('static', filename='Images/accessories.png') }}" class="card-img-top" alt="Accessories">
+            <div class="card-body">
+              <a href="{{ url_for('main.products') }}"><h5 class="card-text">Accessories</h5></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% endblock %}

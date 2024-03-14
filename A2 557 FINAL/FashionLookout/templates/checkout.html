@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Checkout{% endblock %}
+
+{% from 'bootstrap4/form.html' import render_form %}
+
+
+{% block main %}
+    <section>  
+        <div class="container ">
+            <div class="row" id="checkout" style="justify-content: center;">
+                <div class = "col-12 text-center">
+                    <h1>Place Your Order</h1>
+                    <h5>
+                        Please provide your details below to checkout your order. Thank you!
+                    </h5><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "col-10">
+                    {{render_form(form)}}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
